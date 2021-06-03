@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/pictureOne.css">
+{% endblock  %}
+{% block content %}
+    <div id="back">
+           <a class="btn btn-outline-dark mb-4" href="{{ url_for('picturesMenu') }}">Wróć</a>
+
+        </div>
+    <h1 class="center">{{ picture.name }}</h1>
+    <div class="stick">
+     <div class="stickmini">
+
+           <img id="picture" src="../static/img/pictures/{{ picture.link }}" class="card-img-top">
+        </div>
+    <div class="stickmi">
+            <h5 >Artysta: {{ picture.author.name }}</h5>
+            <h6 >Lokalizacja: {{ picture.origin }}</h6>
+            <h6>Rok powstania: {{ picture.year }}</h6>
+            <p>{{ picture.description | safe }}</p>
+            {% if current_user.role=='ADMIN' %}
+                <div class="center">
+               <a class="btn btn-outline-secondary" href="{{ url_for('picture_update', id=picture.id) }}">Edytuj</a>
+               <a class="btn btn-outline-danger" href="{{ url_for('picture_delete', id=picture.id) }}">Usuń</a>
+               </div>
+            {% endif %}
+
+    </div>
+
+    </div>
+
+
+    <div>
+        {% for comment in picture.comments %}
+        <div id="comments" class="center">
+        {% if current_user.role == 'ADMIN' %}
+            <a class="btn btn-outline-danger" href="{{ url_for('comment_delete', picture_id=picture.id, id=comment.id) }}">Usuń</a>
+        {% endif %}
+            <small>{{ comment.date_posted.strftime('%Y-%m-%d') }}</small>
+            <h6 >{{ comment.author.username }}</h6>
+            <p>{{ comment.content }}</p>
+
+
+        </div>
+
+        {% endfor %}
+    </div>
+    {% if current_user.is_authenticated %}
+        <div class="center" id="forma">
+      <form method = "POST" action="">
+          {{ form.hidden_tag() }}
+          <fieldset class="form-group">
+              <div class="form-group">
+                  {{ form.content.label(class="form-control-label") }}
+                  {{ form.content(class="form-control form-control-lg") }}
+              </div>
+
+          </fieldset>
+          <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+          </div>
+      </form>
+        </div>
+        {% endif %}
+
+
+{% endblock content %}

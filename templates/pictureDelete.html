@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock %}
+
+{% block content %}
+
+    <div>
+    <a id="back" href="{{ url_for('picturesMenu') }}" class="btn btn-secondary">
+        Wróć
+    </a>
+    </div>
+    <div style="text-align: center;
+    width: 60%;
+    margin-left:19%;
+    border: solid 1px;
+    padding: 5%;
+    margin-right: 19%;
+    margin-top: 2%;">
+    <h1 style="margin-bottom: 4%;">Na pewno?</h1>
+    <div id="form">
+    <form action="{{ url_for('picture_delete', id=picture.id) }}" method="POST">
+        <input class="btn btn-danger" type="submit" value="Usuń">
+    </form>
+    </div>
+    </div>
+{#     <div class="form">#}
+{#      <form method = "DELETE" action="">#}
+{#          {{ form.hidden_tag() }}#}
+{##}
+{#          <h1>Are you sure you want to delete?</h1>#}
+{#          <h3>{{ picture.name }}</h3>#}
+{#          <div class="form-group">#}
+{#              {{ form.submit(class="btn btn-outline-info") }}#}
+{#          </div>#}
+{##}
+{##}
+{#      </form>#}
+{#     </div>#}
+
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{#    <link rel="stylesheet" href="../static/css/getType.css">#}
+{% endblock  %}
+
+{% block content %}
+    <div style="padding-right:6%; padding-left:6%; padding-top:3%; padding-bottom:3%; text-align: center; width: 60%; margin-left:19%; border: solid 1px; margin-right: 19%; margin-top: 70px; margin-bottom: 200px;}" class="form">
+      <form method = "POST" action="">
+          {{ form.hidden_tag() }}
+          <fieldset class="form-group">
+          <div>
+                  <legend style=" margin-top: 20px; margin-bottom: 20px;" class="border-bottom mb-4"><h1>Edytuj Twoje dane</h1></legend>
+              </div>
+
+
+              <div class="form-group">
+                  {{ form.username.label(class="form-control-label") }}
+                  {% if form.username.errors %}
+                      {{ form.username(class=" form-control-lg is-invalid smaller") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.username.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.username(class="form-control form-control-lg") }}
+                  {% endif %}
+
+              </div>
+              <div class="form-group">
+                  {{ form.email.label(class="form-control-label") }}
+                  {% if form.email.errors %}
+                      {{ form.email(class="form-control form-control-lg is-invalid") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.email.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.email(class="form-control form-control-lg") }}
+                  {% endif %}
+              </div>
+
+          </fieldset>
+          <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+          </div>
+
+
+      </form>
+    </div>
+{% endblock content %}
+
+{#<!DOCTYPE html>#}
+{#<html lang="en">#}
+{#<head>#}
+{#    <meta charset="UTF-8">#}
+{#    <title>Surrealist Gallery</title>#}
+{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">#}
+{#    <link rel="stylesheet" href="../static/css/formType.css">#}
+{#</head>#}
+{#<body>#}
+{#    <div id="central" class="form">#}
+{#      <form method = "POST" action="">#}
+{#          {{ form.hidden_tag() }}#}
+{#          <fieldset class="form-group">#}
+{#              <legend class="border-bottom mb-4">Edytuj Twoje dane</legend>#}
+{##}
+{#              <div class="form-group">#}
+{#                  {{ form.username.label(class="form-control-label") }}#}
+{#                  {% if form.username.errors %}#}
+{#                      {{ form.username(class="form-control form-control-lg is-invalid smaller") }}#}
+{#                      <div class="invalid-feedback">#}
+{#                          {% for error in form.username.errors %}#}
+{#                              <span>{{ error }}</span>#}
+{#                          {% endfor %}#}
+{#                      </div>#}
+{#                  {% else %}#}
+{#                      {{ form.username(class="form-control form-control-lg smaller") }}#}
+{#                  {% endif %}#}
+{##}
+{#              </div>#}
+{#              <div class="form-group">#}
+{#                  {{ form.email.label(class="form-control-label") }}#}
+{#                  {% if form.email.errors %}#}
+{#                      {{ form.email(class="form-control form-control-lg is-invalid smaller") }}#}
+{#                      <div class="invalid-feedback">#}
+{#                          {% for error in form.email.errors %}#}
+{#                              <span>{{ error }}</span>#}
+{#                          {% endfor %}#}
+{#                      </div>#}
+{#                  {% else %}#}
+{#                      {{ form.email(class="form-control form-control-lg smaller") }}#}
+{#                  {% endif %}#}
+{#              </div>#}
+{##}
+{#          </fieldset>#}
+{#          <div class="form-group">#}
+{#              {{ form.submit(class="btn btn-outline-info") }}#}
+{#          </div>#}
+{##}
+{##}
+{#      </form>#}
+{#    </div>#}
+{#</body>#}
+{#</html>#}

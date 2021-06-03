@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+h3 {
+    margin-left: 5%;
+    margin-top: 40px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+
+h1 {
+    margin-left: 5%;
+    margin-top: 40px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.centered {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-family: 'Titillium Web', sans-serif;
+    width: 70%;
+    margin-left:5%;
+}

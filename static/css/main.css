@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #b1bfca;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #b1bfca;
+}
+.margines {
+    margin-bottom: 40px;
+}
+#fors {
+    width:60%;
+    margin-left: 20%;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Titillium Web', sans-serif;
+}
+.ones {
+    margin-bottom: 30px;
+}
+
+.nameArticle {
+    margin-bottom: 30px;
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.article {
+    border: solid black 1px;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top:3%;
+    padding-bottom: 3%;
+    margin-bottom: 30px;
+    background-color: white;
+
+}
+
+.dali {
+    width: 348px;
+    height:444px;
+}
+
+.buton {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+.magritte {
+    width: 368px;
+    height:505px;
+}
+
+.centered {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+@media screen and (min-width: 1150px) {
+    .margined {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+   }
+    .text {
+    margin-left: 20px;
+    margin-right: 20px;
+
+   }
+    .cont {
+    display: flex;
+    flex-direction: row;
+
+   }
+    .ones {
+    margin-bottom: 30px;
+   }
+    #fors {
+    width:60%;
+    margin-left: 20%;
+}
+
+}
+
+@media screen and (max-width: 1149px) {
+    .margined {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+   }
+    .text {
+    margin-left: 20px;
+    margin-right: 20px;
+
+   }
+    .photo {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .cont {
+    display: flex;
+    flex-direction: column;
+
+   }
+    .ones {
+    margin-bottom: 30px;
+    }
+    #fors {
+    width:80%;
+    margin-left: 10%;
+}
+}

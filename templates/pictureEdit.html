@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+{% endblock  %}
+<body>
+{% block content %}
+
+<div style="padding-right:6%; padding-left:6%; padding-top:3%; padding-bottom:3%; text-align: center; width: 60%; margin-left:19%; border: solid 1px; margin-right: 19%; margin-top: 70px; margin-bottom: 200px;}" class="form divv">
+      <form method = "POST" action="" enctype="multipart/form-data">
+          {{ form.hidden_tag() }}
+          <fieldset class="form-group">
+          <div class="naglowek">
+              <legend style=" margin-top: 20px; margin-bottom: 20px;"><h1>{{ legend }}</h1></legend>
+          </div>
+
+              <div class="form-group">
+                  {{ form.name.label(class="form-control-label") }}
+                  {% if form.name.errors %}
+                      {{ form.name(class="form-control form-control-lg is-invalid smaller") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.name.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.name(class="form-control form-control-lg smaller") }}
+                  {% endif %}
+
+              </div>
+
+              <div class="form-group">
+                  {{ form.description.label(class="form-control-label") }}
+                  {% if form.description.errors %}
+                      {{ form.description(class="form-control form-control-lg is-invalid smaller") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.description.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.description(class="form-control form-control-lg smaller") }}
+                  {% endif %}
+
+              </div>
+          <div class="form-group">
+                  {{ form.year.label(class="form-control-label") }}
+                  {% if form.year.errors %}
+                      {{ form.year(class="form-control form-control-lg is-invalid smaller") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.year.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.year(class="form-control form-control-lg smaller") }}
+                  {% endif %}
+
+              </div>
+          <div class="form-group">
+                  {{ form.origin.label(class="form-control-label") }}
+                  {% if form.origin.errors %}
+                      {{ form.origin(class="form-control form-control-lg is-invalid smaller") }}
+                      <div class="invalid-feedback">
+                          {% for error in form.origin.errors %}
+                              <span>{{ error }}</span>
+                          {% endfor %}
+                      </div>
+                  {% else %}
+                      {{ form.origin(class="form-control form-control-lg smaller") }}
+                  {% endif %}
+
+              </div>
+          <div class="form-group choose">
+                  {{ form.picture.label(class="form-control-label") }}
+                  {{ form.picture(class="form-control-file") }}
+              {% if form.picture.errors %}
+                  {% for error in form.picture.errors %}
+                  <span class="text-danger">{{ error }}</span><br>
+                  {% endfor %}
+              {% endif %}
+          </div>
+
+          <div class="form-group">
+                  {{ form.artist.label(class="form-control-label") }}
+                  {{ form.artist(class="form-control-file smaller") }}
+              {% if form.artist.errors %}
+                  {% for error in form.artist.errors %}
+                  <span class="text-danger">{{ error }}</span><br>
+                  {% endfor %}
+              {% endif %}
+          </div>
+
+
+          </fieldset>
+          <div class="form-group">
+              {{ form.submit(class="btn btn-outline-info") }}
+          </div>
+      </form>
+  </div>
+{% endblock content %}
+{{ ckeditor.load }}
+ {{ ckeditor.config(name='description') }}
+</body>
+{% block javascripts %}
+   <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
+{% endblock %}

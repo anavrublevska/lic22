@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
+h1{
+
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top:25px;
+
+}
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Titillium Web', sans-serif;
+    margin:2%;
+
+}
+/*#picture {*/
+/*    height: 300px;*/
+/*    width: 450px;*/
+/*}*/
+
+#picture {
+    /*width: 48%;*/
+    /*height: auto;*/
+    /*margin: 20px;*/
+    /*margin-right:26%;*/
+    /*margin-left:26%;*/
+}
+
+.center {
+    text-align: center;
+}
+
+#comments {
+    width:48%;
+    background-color: aliceblue;
+    margin-right:26%;
+    margin-left:26%;
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
+#back {
+    margin-top:10px;
+}
+#frame {
+    border:1px solid black;
+    background-color: aliceblue;
+    padding:2%;
+    width:48%;
+    margin-right:26%;
+    margin-left:26%;
+    margin-top:20px;
+    margin-bottom:20px;
+
+}
+
+#forma {
+    width:48%;
+    margin-right:26%;
+    margin-left:26%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+/*.stick {*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*    justify-content: space-around;*/
+/*    margin-top: 30px;*/
+/*}*/
+
+/*.stickmini {*/
+/*    width:45%;*/
+/*    margin-left: 2.5%;*/
+/*}*/
+
+/*.stickmi {*/
+/*    width:45%;*/
+/*    margin-right: 2.5%;*/
+/*}*/
+
+@media screen and (min-width: 1000px) {
+    .stick {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 30px;
+    }
+    .stickmini {
+        width:45%;
+        margin-left: 2.5%;
+    }
+
+
+    .stickmi {
+        width:45%;
+        margin-right: 2.5%;
+    }
+
+}
+
+
+@media (max-width: 999px){
+   .stick {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .stickmini {
+        width:90%;
+        margin-left: 5%;
+    }
+
+
+    .stickmi {
+        width:90%;
+        margin: 5%;
+    }
+}
