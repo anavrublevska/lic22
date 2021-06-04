@@ -247,7 +247,7 @@ h2 {
 }
 
 
-@media (max-width: 649px) and (min-width: 100px) {
+@media screen and (max-width: 649px) {
    #photo_gallery {
         display: flex;
         flex-direction: column;

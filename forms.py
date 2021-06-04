@@ -3,7 +3,6 @@ from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, IntegerField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from flask_login import current_user
-from wtforms_sqlalchemy.fields import QuerySelectField
 # from app import User, artist_query
 from flask_ckeditor import CKEditorField
 # from app.py import User, Artist

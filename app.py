@@ -13,6 +13,7 @@ from flask_ckeditor import CKEditor
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin@localhost:5432/licencjat_gallery"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:admin@localhost:5432/licencjat_gallery"
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 bcrypt = Bcrypt()
