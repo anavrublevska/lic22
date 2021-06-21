@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
-
+{% block title %}
+    <title>Logowanie</title>
+{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/formType.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formType.css') }}" type="text/css"/>
+
 {% endblock  %}
 
 {% block content %}
@@ -51,9 +54,6 @@
               {{ form.submit(class="btn btn-outline-info") }}
           </div>
       </form>
-{#          <small class="text-muted ml-2">#}
-{#               Help <a href="#">Forgot password?</a>#}
-{#          </small>#}
 
         <div class="border-top pt-3 bottom">
               <small class="text-muted ">

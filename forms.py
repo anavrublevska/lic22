@@ -3,9 +3,7 @@ from flask_wtf.file import FileField, FileAllowed
 from wtforms import StringField, PasswordField, SubmitField, BooleanField, TextAreaField, IntegerField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from flask_login import current_user
-# from app import User, artist_query
 from flask_ckeditor import CKEditorField
-# from app.py import User, Artist
 
 class RegistrationForm(FlaskForm):
     username = StringField('Username', validators=[DataRequired(), Length(min=2, max=40)])
@@ -67,8 +65,6 @@ class CommentForm(FlaskForm):
     content = TextAreaField('Twój komentarz:', validators=[DataRequired()])
     submit = SubmitField('Wyślij')
 
-# def artist_query():
-#     return Artist.query
 
 class PictureForm(FlaskForm):
     name = StringField('Nazwa obrazu', validators=[DataRequired()])

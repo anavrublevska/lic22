@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
-
+{% block title %}
+    <title>Usuń komentarz</title>
+{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -26,19 +28,6 @@
     </div>
     </div>
 
-{#     <div class="form">#}
-{#      <form method = "DELETE" action="">#}
-{#          {{ form.hidden_tag() }}#}
-{##}
-{#          <h1>Are you sure you want to delete?</h1>#}
-{#          <h3>{{ picture.name }}</h3>#}
-{#          <div class="form-group">#}
-{#              {{ form.submit(class="btn btn-outline-info") }}#}
-{#          </div>#}
-{##}
-{##}
-{#      </form>#}
-{#     </div>#}
 
 
 {% endblock %}

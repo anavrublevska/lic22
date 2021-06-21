@@ -98,8 +98,7 @@ h3 {
     #fors {
     width:60%;
     margin-left: 20%;
-}
-
+   }
 }
 
 @media screen and (max-width: 1149px) {
@@ -128,5 +127,5 @@ h3 {
     #fors {
     width:80%;
     margin-left: 10%;
-}
+    }
 }

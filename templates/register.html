@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
-
+{% block title %}
+    <title>Rejestracja</title>
+{% endblock %}
 {% block stylesheets %}
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/formType.css">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/formType.css') }}">
+
 {% endblock  %}
 
 {% block content %}
@@ -55,10 +58,6 @@
                   {% endif %}
 
               </div>
-{#              <div class="form-group">#}
-{#                  {{ form.password.label(class="form-control-label") }}#}
-{#                  {{ form.password(class="form-control form-control-lg") }}#}
-{#              </div>#}
               <div class="form-group">
                   {{ form.confirm_password.label(class="form-control-label ") }}
                   {% if form.confirm_password.errors %}
@@ -73,10 +72,6 @@
                   {% endif %}
 
               </div>
-{#              <div class="form-group">#}
-{#                  {{ form.confirm_password.label(class="form-control-label") }}#}
-{#                  {{ form.confirm_password(class="form-control form-control-lg") }}#}
-{#              </div>#}
 
           </fieldset>
           <div class="form-group">

@@ -1,63 +1,69 @@
 {% extends 'base.html' %}
 {% block title %}
-    <title>Main page</title>
+    <title>Galeria obrazów</title>
 {% endblock %}
 
 {% block stylesheets %}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mainPage.css') }}" type="text/css"/>
 {% endblock  %}
 
 {% block content %}
     <body>
     <div class="margined">
-        <h1 class="hh"> Strona główna</h1>
+        <h1 class="hh"> Strona glowna</h1>
         <div class="article">
-{#            <img class="carouselle-pictures d-block w-100" src="../static/img/carousel5.jpg" alt="picture">#}
             <h2 class="nameArticle">Surrealizm</h2>
 
 
             <div class="text">
-                <p>Surrealizm (fr. surrealisme - "nadrealizm") - kierunek w sztuce XX wieku, dla którego właściwe są nawiązania do podświadomych skojarzeń, myślenie irracjonalne, obrazy z optycznymi iluzjami i paradoksalne połączenie form. Surrealizm powstał w środowisku francuskich dadaistów, które odzwierciedlały swoją sztuką absurdalność świata, rozczarowywania w wartościach i ideałach, które panowały do Pierwszej światowej wojny. </p>
-                <p>Surrealizm wywarł trwały wpływ na malarstwo, rzeźbę, literaturę, fotografię i film.
-                Powstał po Pierwszej wojnie światowej  we Francji w latach 1920-tych i aktywnie rozwijał się do początku Drugiej wojny światowej .</p>
-<p>Ważne jest to, że surrealizm był ruchem międzynarodowym. Choć powstał w Paryżu, ogniska surrealistycznej aktywności pojawiły się w Belgii, Anglii, Czechosłowacji, Meksyku, Stanach Zjednoczonych, częściach Ameryki Łacińskiej i Japonii. Surrealizm wywarł istotny wpływ na późniejszych artystów z kręgu ekspresjonizmu abstrakcyjnego, Art Brut i sytuacjonistów, a jego znaczenie w historii sztuki utrzymuje się do dziś. Surrealizm dał bodziec do powstania i rozwoju magicznego realizmu, fantastycznego realizmu, pop-artu. Jemu zawdzięcza powstania performens. W 1960-х i 1970-х latach powstaje tak zwany neosurrealizm,który zawiera wizualne elementy, podobne albo zapożyczone z surrealizmu.
-</p>
-            </div>
+                 <p>Surrealizm (fr. surrealisme - "nadrealizm") - kierunek w sztuce XX wieku, dla którego właściwe są nawiązania do podświadomych skojarzeń, myślenie irracjonalne, obrazy z optycznymi iluzjami i paradoksalne połączenie form. Surrealizm powstał w środowisku francuskich dadaistów, które odzwierciedlały swoją sztuką absurdalność świata, rozczarowywania w wartościach i ideałach, które panowały do Pierwszej światowej wojny. </p>
+                <p>Surrealizm wywarł trwały wpływ na literaturę, malarstwo, rzeźbę, fotografię i film. Dla stylu surrealistycznego właściwe są nawiązania do podświadomych skojarzeń oraz pomysły irracjonalne. Literaturę w danym stylu wyróżnia pismo automatyczne,
+                       <br>  w malarstwie często pojawiają się optyczne iluzje, paradoksalne połączenia form, zestawienie przedmiotów w nietypowym kontekście. </p>
+
+                <p>Ważne jest to, że surrealizm był ruchem międzynarodowym. Choć powstał w Paryżu, ogniska surrealistycznej aktywności pojawiły się w Belgii, Anglii, Czechosłowacji, Meksyku, Stanach Zjednoczonych, częściach Ameryki Łacińskiej i Japonii. Surrealizm wywarł istotny wpływ na późniejszych artystów z kręgu ekspresjonizmu abstrakcyjnego, Art Brut i sytuacjonistów, a jego znaczenie <br> w historii sztuki utrzymuje się do dziś. Surrealizm dał bodziec do powstania i rozwoju magicznego realizmu, fantastycznego realizmu, pop-artu. Jemu zawdzięcza powstania performens. W 1960-х i 1970-х latach powstaje tak zwany neosurrealizm,który zawiera wizualne elementy, podobne albo zapożyczone z surrealizmu.</p>
+                <p>W roku 1924 francuski pisarz André Breton napisał ,,Manifest surrealizmu”. To była pierwsza publikacja, w której zostały przedstawione założenia surrealizmu w literaturze. W swojej pracy Breton rozważa wpływ wyobraźni na twórczość, analizuje znaczenie marzeń sennych. </p>
+                <p>Breton zachęca:</p>
+                <ul>
+                  <li>pisarzy, żeby tworzyli teksty nie w stricte informacyjnym, opisowym stylu, \\ale przedstawiając swoje obserwacje oraz pomysły w utworach;</li>
+                  <li>artystów, żeby tworzyli obrazy z przesłaniem, ponieważ w malarstwie według Bretona ,,w obrazie ważniejsza od wartości czysto malarskich jest treść, zawartość – intencja, uczucie bądź emocja kierująca malarzem”.</li>
+               </ul>
+
+               <p>Do rozważania tematu marzeń sennych Breton został zainspirowany pracą ,,Objaśnienie marzeń sennych” Zygmunta Freuda. Zygmunt Freud (1956-1939) - austriacki neurolog żydowskiego pochodzenia, który jest uznawany za twórcę psychoanalizy. Freud badał funkcjonowanie umysłu ludzkiego i jako pierwszy stwierdził, że zachowanie człowieka i większość podejmowanych przez niego decyzji jest wyznaczana podświadomymi czynnikami emocjonalnymi, a nie myśleniem racjonalnym. W książce ,,Objaśnienie marzeń sennych” z 1899 roku, Zygmunt Freud przedstawił teorię o tym, że sny są odzwierciedleniem podświadomości, <br> i interpretować je można tylko w nieracjonalny sposób, co uwarunkowało zwrócenie się surrealistów do ,,snu na jawie".</p>
+               <p>Surrealizm oficjalnie rozpoczął się wraz z manifestem surrealistycznym francuskiego pisarza André Bretona z 1924 roku, ale ruch powstał już w 1917 roku, dzięki obrazowi Giorgio de Chirico ,,Pieśń miłosna” , na którym zobrazował ulicę w stylu surrealistycznym. Po 1917 roku de Chirico porzucił ten styl, ale jego twórczość oraz kolaże niemieckiego dadaisty Maxa Ernsta wywarły wpływ na surrealistów. </p>
+
+             </div>
 
         </div>
         <div>
             <div id="carouselExampleControls" class="carousel slide margines" data-ride="carousel">
                 <div id="fors" class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="carouselle-pictures d-block w-100 imagescarousel" src="../static/img/carousel1.jpg" alt="Max Ernst picture">
+                        <img class="carouselle-pictures d-block w-100" src="{{url_for('static', filename='img/carousel1.jpg')}}" alt="picture">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Triumf surrealizmu 1937</h5>
                             <p>Max Ernst</p>
                         </div>
                     </div>
-{#                    <div class="carousel-item">#}
-{#                        <img class="carouselle-pictures d-block w-100" src="../static/img/one.jpg" alt="cubes">#}
-{#                    </div>#}
                     <div class="carousel-item">
-                        <img class="carouselle-pictures d-block w-100" src="../static/img/carousel2.jpg" alt="picture">
+                        <img class="carouselle-pictures d-block w-100" src="{{url_for('static', filename='img/carousel2.jpg')}}" alt="picture">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Fałszywe lustro 1928</h5>
+                            <h5>Falszywe lustro 1928</h5>
                             <p>Rene Magritte</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="carouselle-pictures d-block w-100" src="../static/img/carousel3.jpg" alt="picture">
+                        <img class="carouselle-pictures d-block w-100" src="{{url_for('static', filename='img/carousel3.jpg')}}" alt="picture">
                         <div class="carousel-caption d-none d-md-block">
                             <h5>Pole orne 1923</h5>
                             <p>Joan Miro</p>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="carouselle-pictures d-block w-100" src="../static/img/carousel4.jpg" alt="picture">
+                        <img class="carouselle-pictures d-block w-100" src="{{url_for('static', filename='img/carousel4.jpg')}}" alt="picture">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Sen (Lóżko) 1940</h5>
+                            <h5>Sen (Lozko) 1940</h5>
                             <p>Frida Kahlo</p>
                         </div>
                     </div>
@@ -75,25 +81,32 @@
 
             </div>
         </div>
+        <div class="centered">
+            <p>Obrazy pochodzą ze strony WikiArt.</p>
+        </div>
         <div class="article">
         <h2 class="nameArticle">Salvador Dali</h2>
             <div class="cont ones">
                 <div class="photo">
-                    <img class="dali" src="../static/img/dali1.jpg" alt="picture">
+                    <img class="dali" src="{{url_for('static', filename='img/dali1.jpg')}}" alt="picture">
                 </div>
                 <div class="text">
-                    <p>Hiszpański malarz Salvador Dalí dołączył do ruchu surrealistycznego w 1928 roku i przykuł uwagę Sigmunda Freuda, który wolał jego prace od innych surrealistów.</p>
+                    <p>Hiszpański malarz Salvador Dalí dołączył do ruchu surrealistycznego w 1928 roku i przykuł uwagę Zygmunta Freuda, który wolał jego prace od innych surrealistów.</p>
 
-                    <p>Obrazy Dalíego zawierają psychoseksualne podteksty, które przedstawiają to, co Freud scharakteryzował jako nieświadomość manifestującą się w świecie świadomym. Jego obrazy graniczą z iluzją, artysta tworzył realistyczny rysunek, który przyniósł mu długotrwałą popularność na całym świecie.</p>
+                    <p>Obrazy Dalíego zawierają psychoseksualne podteksty, które przedstawiają to,
+                        <br> co Freud scharakteryzował jako nieświadomość manifestującą się w świecie świadomym. Jego obrazy graniczą z iluzją, artysta tworzył realistyczny rysunek, który przyniósł mu długotrwałą popularność na całym świecie.</p>
 
-<p>Jeden z jego najsłynniejszych obrazów, "Trwałość pamięci" z 1931 roku, przedstawia topniejące zegary nałożone na opustoszały pejzaż.
+
+
+<p>Jeden z jego najsłynniejszych obrazów, <i>Trwałość pamięci</i> z 1931 roku, przedstawia topniejące zegary nałożone na opustoszały pejzaż.
 </p>
-                    <p>Dalí i Magritte stawiają sobie za cel zakwestionowanie rzeczywistości, podważenie poglądów i zachwianie przekonań. Kataloński artysta dali i Belgijski artysta Magritte wykazują fascynującą bliskość, mimo bardzo różnych osobowości, które w końcu doprowadzą ich do rozejścia się. Wiosną 1929 roku Salvador Dalí i René Magritte spotykają się w Paryżu, w otoczeniu znanych ludzi artystycznej awangardy. W sierpniu tego samego roku, na zaproszenie Daliego, Magritte udaje się do Cadaqués, rodzinnej miejscowości hiszpańskiego malarza.</p>
+                    <p>Dalí i Magritte stawiają sobie za cel zakwestionowanie rzeczywistości, podważenie poglądów i zachwianie przekonań. Kataloński artysta Dali i Belgijski artysta Magritte wykazują fascynującą bliskość, mimo bardzo różnych osobowości, które w końcu doprowadzą ich do rozejścia się. Wiosną 1929 roku Salvador Dalí i René Magritte spotykają się w Paryżu, w otoczeniu znanych ludzi artystycznej awangardy. W sierpniu tego samego roku, na zaproszenie Daliego, Magritte udaje się do Cadaqués, rodzinnej miejscowości hiszpańskiego malarza.</p>
+                   <p><i>Obraz pochodzi ze strony Encyclopædia Britannica, Inc.</i></p>
                 </div>
 
             </div>
             <div class="buton">
-                <a class="btn btn-outline-secondary" href="{{ url_for('gallery_artist', artist_id=1) }}">Obrazy</a>
+                <a class="btn btn-outline-secondary" href="{{ url_for('gallery_artist', artist_id=2) }}">Obrazy</a>
             </div>
 
 
@@ -104,26 +117,23 @@
             <div class="cont">
 
                 <div class="text">
-                    <p> Magritte jest najbardziej znany z dowcipu swoich obrazów,
-                        Nazywany „autorem słów i rzeczy”, ponieważ lubił zmieniać nazwy przedmiotów , czego przykładem mógłby być obraz Zdradliwość obrazów. Obrazy jego szokowały i wzbudzały kontrowersje, wyróżnia je poetycka nastrojowość oraz precyzyjny rysunek. </p>
+                    <p> Rene Magritte jest belgijskim malarzem, najbardziej znanym z dowcipnego charakteru swoich obrazów.
+                        Artysta jest nazywany „autorem słów i rzeczy”, ponieważ w wielu swoich dziełach przedstawiał powiązanie pomiędzy przedmiotem a jego nazwą. </p>
+                      <p>Jego obrazy wzbudzały kontrowersje, np. <i>Zdrada obrazów</i> z 1929 roku. Prosty obraz fajki ze słowami, w języku francuskim, głoszącymi, że to nie jest fajka. Artysta wpłynął na sztukę drugiej połowy XX w., przede wszystkim na pop-art. Jego obrazy osiągnęły status ikony, na przykład <i>Fałszywe lustro</i> z 1928 roku, na którym jest zobrazowane zachmurzone niebo w zbliżeniu oka.</p>
+
                        <p> Belgia miała swój własny wpływowy ruch surrealistyczny, który ogłosił się zaraz po manifeście Bretona. Camille Goemans, Marcel Lecomte i Paul Nougé byli artystami, którzy znaleźli się w jego centrum.
 
                     Dołączyli do nich inni, ale to malarz René Magritte zawładnął wyobraźnią świata.</p>
 
-                    <p>Artysta wpłynął mimowolnie na sztukę drugiej połowy XX w., przede wszystkim na pop-art, a jego obrazy osiągnęły status ikony, jak na przykład Fałszywe lustro z 1928 roku,  zachmurzone niebo w zbliżenie oka, czy Zdrada obrazów z 1929 roku, prosty obraz fajki ze słowami, w języku francuskim, głoszącymi, że to nie jest fajka.</p>
-
-
-
-
-                    <p>Surrealiści - zainspirowani teoriami Zygmunta Freuda o snach i nieświadomości - uważali, że szaleństwo jest zerwaniem łańcuchów logiki i reprezentowali tę ideę w swojej sztuce poprzez tworzenie obrazów niemożliwych do zrealizowania w rzeczywistości, zestawiając nieprawdopodobne formy z niewyobrażalnymi krajobrazami.</p>
-
+                    <p>Artyści, którzy tworzyli w stylu surrealistycznym, zostali zainspirowani teoriami Zygmunta Freuda o snach oraz nieświadomości i próbowali przedstawić <br> tę ideę w swojej sztuce poprzez tworzenie obrazów, na których przedmioty są połączone w dziwny sposób lub znajdują się w nietypowym kontekście.</p>
+                    <p><i>Obraz pochodzi ze strony Pinterest.</i></p>
                 </div>
                <div class="photo">
-                <img class="magritte" src="../static/img/magritte.jpg" alt="picture">
+                   <img class="magritte" src="{{url_for('static', filename='img/magritte.jpg')}}" alt="picture">
             </div>
             </div>
             <div class="buton">
-                <a class="btn btn-outline-secondary" href="{{ url_for('gallery_artist', artist_id=2) }}">Obrazy</a>
+                <a class="btn btn-outline-secondary" href="{{ url_for('gallery_artist', artist_id=1) }}">Obrazy</a>
             </div>
 
 

@@ -6,7 +6,8 @@
 {% block stylesheets %}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/about.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}" type="text/css"/>
+
 {% endblock  %}
 
 {% block content %}
@@ -14,8 +15,8 @@
     <h1>Sztuka surrealistyczna - dzieła Salvadora Dalego i Rene Magritte'a</h1>
     <h3>O pracy</h3>
     <div class="centered">
-    <p>Niniejsza praca stanowi dokumentację pracy licencjackiej realizowanej w ramach studiów Elektronicznego Przetwarzania Informacji na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego. Celem projektu jest stworzenie serwisu w postaci internetowej galerii obrazów, przedstawiającego dzieła dwóch znanych surrealistów – Salvadora Dalego i Rene Magritte’a.</p>
-    <p>Surrealism – ruch w literaturze i malarstwie XX wieku, wyróżniający się dzięki swojej awangardowości, ekstrawagancji oraz tajemniczości. Obrazy surrealistów są znane oraz powszechnie rozpoznawalne nawet wśród osób, szczególnie nie interesujących się danym stylem w malarstwie. Styl surrealistyczny zawiera odniesienia do psychoanalizy oraz elementy “snów na jawie”, dlatego dla rozumienia obrazów potrzebne są bardziej szczegółowe wytłumaczenia/opisy.</p>
+        <p>Autorem niniejszego serwisu jest Anastasiya Vrublevska. Serwis ten stanowi integralną część pracy licencjackiej (kierunek: Elektroniczne Przetwarzanie Informacji), przygotowanej pod kierunkiem dr. Piotra Śliwińskiego na Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego.</p>
+        <p>Surrealism – ruch w literaturze i malarstwie XX wieku, wyróżniający się dzięki swojej awangardowości, ekstrawagancji oraz tajemniczości. Obrazy surrealistów są znane oraz powszechnie rozpoznawalne nawet wśród osób, szczególnie nie interesujących się danym stylem w malarstwie. Styl surrealistyczny zawiera odniesienia do psychoanalizy oraz elementy “snów na jawie”, dlatego dla rozumienia obrazów potrzebne są bardziej szczegółowe wytłumaczenia/opisy.</p>
 
     </div>
 
@@ -29,21 +30,29 @@
     <li>
         <p>2. Ingram K., <i>This is Dali</i>, London, Laurence King Publishing, 2014.</p>
     </li>
-{#     <li>#}
-{#        <p>3. Dali S., <i>Diary of a genius</i></p>#}
-{#    </li>#}
+    <li>
+        <p>3. Pichot A., <i>Theatre-Museum Dali</i>, Barcelona, Triangle Books, 2015.</p>
+    </li>
 
     </ul>
     <p>Tłumaczenia tekstów są mojego autorstwa.</p>
     </div>
 
-
-
-
-    <h3>Źródła obrazów</h3>
+    <h3>Źródła elektroniczne:</h3>
     <div class="centered">
-     <p>Obrazy, umieszczone w galerii zostały zapożyczone ze strony<a href="https://www.wikiart.org"> WikiArt </a></p>
+    <ul>
+    <li><p>Strona z analizą dzieł Rene Magritte'a <a href="https://renemagritte.org/">www.renemagritte.org</a>.</p></li>
+    <li><p>Strona z analizą dzieł Salvadora Dali <a href="https://www.dalipaintings.com/">www.dalipaintings.com</a>.</p></li>
+    <li><p>Artykuł o historii surrealizmu <a href="https://www.history.com/topics/art-history/surrealism-history">link</a>.</p></li>
+    <li><p>Strona Khan Academy z informacją o ruchu surrealistycznym <a href="https://www.khanacademy.org/humanities/art-1010/dada-and-surrealism/xdc974a79:surrealism/a/surrealism-an-introduction">link</a>.</p></li>
+    </ul>
     </div>
+
+    <h3>Źródła obrazów:</h3>
+    <div class="centered">
+     <p>Obrazy, umieszczone w galerii zostały zapożyczone ze stron<a href="https://www.wikiart.org"> WikiArt </a>.</p>
+    </div>
+
 
 
 

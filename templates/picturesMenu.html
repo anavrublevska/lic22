@@ -1,38 +1,3 @@
-{#{% extends 'base.html' %}#}
-{#{% block title %}#}
-{#    <title>Pictures</title>#}
-{#{% endblock %}#}
-{#{% block stylesheets %}#}
-{##}
-{#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">#}
-{#    <link rel="stylesheet" href="../static/css/picturesMenu.css">#}
-{#{% endblock  %}#}
-{#{% block body %}#}
-{#    <h1>Obrazy</h1>#}
-{#    <div id="photo_gallery">#}
-{#            {% for a in results %}#}
-{#                <div id="photo" class="card">#}
-{#                   <img src="../static/{{ a.link }}" class="card-img-top">#}
-{#                    <div class="card-body">#}
-{#                        <h5 class="card-title">{{ a.name }}</h5>#}
-{#                        <h6>{{ a.origin }}{{ a.year }}</h6>#}
-{##}
-{#                        <p class="card-text">{{ a.description }}</p>#}
-{#href="{{ url_for('login') }}" /picture/{{ a.id }}#}
-{#                        <a href="{{ url_for('pictureOne', id=a.id) }}" title="See me!" class="btn btn-outline-dark">Podglad</a>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{#    </div>#}
-{#    {% for a in results %}#}
-{#    <h1>{{ a.name }}</h1>#}
-{#    <h2>{{ a.year }}</h2>#}
-{#    <h3>{{ a.origin }}</h3>#}
-{#    <p>{{ a.description }}</p>#}
-{#    <img src="static/{{ a.link }}">#}
-{#    {% endfor %}#}
-{##}
-{#{% endblock %}#}
 {% extends 'base.html' %}
 {% block title %}
     <title>Pictures</title>
@@ -40,7 +5,7 @@
 {% block stylesheets %}
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../static/css/picturesMenu.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/picturesMenu.css') }}" type="text/css"/>
 {% endblock  %}
 {% block art %}
     <h1>Obrazy</h1>
@@ -61,47 +26,31 @@
 
     </div>
 
-{#    <div id="photo_gallery">#}
-{#            {% for a in results %}#}
-{#                <div id="photo" class="card">#}
-{#                   <img  src="../static/img/pictures/{{ a.link }}" class="card-img-top">#}
-{#                    <div class="card-body">#}
-{#                        <h5 class="card-title">{{ a.name }}</h5>#}
-{#                        <h6>{{ a.origin }}</h6>#}
-{#                        <h6>{{ a.year }}</h6>#}
-{##}
-{#                        <a href="{{ url_for('pictureOne', id=a.id) }}" title="See me!" class="btn btn-outline-dark">Podglad</a>#}
-{#                    </div>#}
-{#                </div>#}
-{#            {% endfor %}#}
-{##}
-{#    </div>#}
 
-{#    <-->#}
     <div id="photo_gallery">
             {% for a in results %}
                 {% if a.sizeh=='V' %}
                     <div class="karta">
                    <div class="divobrazka">
-                      <img class="obrazek" src="../static/img/pictures/{{ a.link }}" >
+                      <img class="obrazek" src="{{url_for('static', filename='img/pictures/')}}{{ a.link }}" >
                    </div>
                     <div class="bodycard">
                         <h5 >{{ a.name }}</h5>
-                        <h6>Artysta: {{ a.artist }}</h6>
-                        <h6>Rok powstania: {{ a.year }}</h6>
+                        <h6>{{ a.artist }}</h6>
+                        <h6>{{ a.year }}</h6>
 
                         <a href="{{ url_for('pictureOne', id=a.id) }}" title="See me!" class="btn btn-outline-dark knopka">Podglad</a>
                     </div>
                 </div>
                 {% elif a.sizeh=='H' %}
                     <div id="photo" class="card">
-                       <img  src="../static/img/pictures/{{ a.link }}" class="card-img-top">
+                       <img  src="{{ url_for('static', filename='img/pictures/')}}{{ a.link }}" class="card-img-top">
                        <div class="card-body">
                          <h5 class="card-title">{{ a.name }}</h5>
-                         <h6>{{ a.origin }}</h6>
+                         <h6>{{ a.artist }}</h6>
                          <h6>{{ a.year }}</h6>
 
-                         <a href="{{ url_for('pictureOne', id=a.id) }}" title="See me!" class="btn btn-outline-dark">Podglad</a>
+                         <a href="{{ url_for('pictureOne', id=a.id) }}" title="See me!" class="btn btn-outline-dark">Podgląd</a>
                     </div>
                 </div>
                 {% endif %}
@@ -126,12 +75,5 @@
 
     </div>
 
-{#    {% for a in results %}#}
-{#    <h1>{{ a.name }}</h1>#}
-{#    <h2>{{ a.year }}</h2>#}
-{#    <h3>{{ a.origin }}</h3>#}
-{#    <p>{{ a.description }}</p>#}
-{#    <img src="static/{{ a.link }}">#}
-{#    {% endfor %}#}
 
 {% endblock %}
